@@ -1,0 +1,35 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)" "(v12_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x56545c05aae0 .scope module, "pare_mai_mici" "pare_mai_mici" 2 1;
+ .timescale 0 0;
+v0x56545c0366d0_0 .var/i "i", 31 0;
+    .scope S_0x56545c05aae0;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x56545c0366d0_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x56545c0366d0_0;
+    %cmpi/s 11, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x56545c0366d0_0;
+    %muli 3, 0, 32;
+    %vpi_call 2 5 "$display", S<0,vec4,s32> {1 0 0};
+    %load/vec4 v0x56545c0366d0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x56545c0366d0_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "multiplii_lui_3_8.v";
